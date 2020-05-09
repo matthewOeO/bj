@@ -37,20 +37,12 @@ fn test_display() {
             rank: Rank::Pip(2),
         },
     ]);
-    let ret: String = h.0[0]
-        .to_string()
-        .lines()
-        .zip(h.0[1].to_string().lines())
-        .map(|(c1, c2)| format!("{} {}\n", c1, c2))
-        .collect::<String>();
-    println!("{}", ret);
     assert_eq!(
-        ret,
-        "┌───┐ ┌───┐
-│♥  │ │♠  │
-│  A│ │ 10│
-└───┘ └───┘
-"
+        "┌───┐ ┌───┐ ┌───┐
+│♥  │ │♠  │ │♦  │
+│  A│ │ 10│ │  2│
+└───┘ └───┘ └───┘
+",
+        h.to_string()
     );
-    println!("{}", h);
 }
