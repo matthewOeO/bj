@@ -1,4 +1,4 @@
 pub mod card;
-mod hand;
-mod rank;
-mod suit;
+pub mod hand;
+pub mod rank;
+pub mod suit;
