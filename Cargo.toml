@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 cm = { path = "cm" }
+itertools = "0.9.0"
